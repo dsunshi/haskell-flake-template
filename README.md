@@ -21,6 +21,15 @@ This project bundles serveral niceties to help getting started with a new Haskel
 git clone https://github.com/dsunshi/haskell-flake-template.git
 cd haskell-flake-template
 ```
-2. Allow direnv: `direnv allow`
-3. Update Cabal: `cabal update`
-4. Download local hoogle index (optional): `hoogle generate --download`
+2. Allow direnv:
+```bash
+direnv allow
+```
+3. Update Cabal:
+```bash
+cabal update
+```
+4. Download local hoogle index (optional):
+```bash
+hoogle generate --download
+```
