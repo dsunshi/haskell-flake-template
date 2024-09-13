@@ -14,7 +14,6 @@ common warnings
 executable my-project
     import:             warnings
     main-is:            Main.hs
-    default-extensions: FlexibleContexts
     other-extensions:   UnicodeSyntax
     build-depends:      base
     hs-source-dirs:     src
