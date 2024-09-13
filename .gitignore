@@ -1,3 +1,6 @@
+# direnv
+.direnv/
+# Haskell related files
 dist
 dist-*
 cabal-dev
