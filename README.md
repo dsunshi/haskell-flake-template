@@ -18,8 +18,8 @@ This project bundles serveral niceties to help getting started with a new Haskel
 
 1. Checkout this repository:
 ```bash
-git clone https://github.com/dsunshi/haskell-flake-template.git
-cd haskell-flake-template
+git clone https://github.com/dsunshi/haskell-flake-template.git my-project
+cd my-project
 ```
 2. Allow direnv:
 ```bash
