@@ -28,7 +28,8 @@
             haskellPackages.haskell-debug-adapter
             haskellPackages.haskell-dap
             haskellPackages.ghci-dap
-            haskellPackages.threadscope
+            haskellPackages.threadscope # A graphical tool for profiling parallel Haskell programs
+            haskellPackages.markdown-unlit # Literate Haskell support for Markdown
           ];
         };
       };

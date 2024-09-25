@@ -1,4 +1,6 @@
 module Main where
 
+import Greet
+
 main :: IO ()
-main = putStrLn "Hello World!"
+main = putStrLn $ greet "World"

@@ -1,5 +1,7 @@
 # direnv
 .direnv/
+# Hoogle
+tags
 # Haskell related files
 dist
 dist-*
