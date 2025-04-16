@@ -2,6 +2,25 @@
 
 # What's included?
 
+* ghc
+* cabal
+* stack
+* hie
+
+## C-libraries (often required by Haskell applications):
+
+* zlib
+
+## Optional features
+
+It should be easy to add the following by un-commenting code in `flake.nix`:
+* ormolu
+* hlint
+* hoogle
+* retrie
+* threadscope
+* markdown-unlint
+
 # Getting Started
 
 Checkout this repository:
@@ -17,9 +36,15 @@ Setup Cabal:
 ```bash
 cabal init
 ```
-or
+**or**
 ```bash
 cabal init --non-interactive
+```
+## Stack (optional)
+
+After Cabal has been setup (`cabal init`) it is possible to use stack as well:
+```bash
+stack init
 ```
 
 ## Optional
