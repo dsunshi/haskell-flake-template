@@ -52,6 +52,7 @@ stack init
 Allow direnv:
 ```bash
 direnv allow
+```
 
 Download local hoogle index:
 ```bash
