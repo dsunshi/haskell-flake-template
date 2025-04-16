@@ -6,6 +6,8 @@
 * cabal
 * stack
 * hie
+* `.gitignore`
+* `.envrc`
 
 ## C-libraries (often required by Haskell applications):
 
