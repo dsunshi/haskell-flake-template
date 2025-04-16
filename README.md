@@ -32,6 +32,20 @@ git clone https://github.com/dsunshi/haskell-flake-template.git <my-project>
 cd <my-project>
 ```
 
+## Starting with your own git repository
+
+Since `haskell-flake-template` is it's own `git` repository you may want to delete this information and restart your project as it's own `git` project. You can do this by:
+
+1. Remove all `haskell-flake-template` `git` data:
+```bash
+rm -rf .git/
+```
+
+2. Create a new `git` project:
+```bash
+git init
+```
+
 Setup Cabal:
 ```bash
 cabal init
