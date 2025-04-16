@@ -7,6 +7,9 @@
 Checkout this repository:
 ```bash
 git clone https://github.com/dsunshi/haskell-flake-template.git <my-project>
+```
+
+```bash
 cd <my-project>
 ```
 
