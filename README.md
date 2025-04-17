@@ -34,6 +34,30 @@ git clone https://github.com/dsunshi/haskell-flake-template.git <my-project>
 cd <my-project>
 ```
 
+## Adding Haskell libraries
+
+In order to add a Haskell library, add the name of the library:
+1. In `flake.nix` under the comment `# Other Haskell modules go here:` inside the variable `ghc`
+2. In the `build-depends` section of your `.cabal` file
+
+### Example
+In `flake.nix`:
+```nix
+      ghc = hPkgs.ghcWithPackages (ps:
+        with ps;
+        [
+          # Packages to make available to GHC
+          ghcid # Needed for nixvim LSP
+          # Other Haskell modules go here:
+          microlens
+        ]);
+```
+
+In `<my-project>.cabal`:
+```cabal
+    build-depends:    base ^>=4.19.2.0, microlens
+```
+
 ## Starting with your own git repository
 
 Since `haskell-flake-template` is it's own `git` repository you may want to delete this information and restart your project as it's own `git` project. You can do this by:
