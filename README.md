@@ -34,13 +34,26 @@ git clone https://github.com/dsunshi/haskell-flake-template.git <my-project>
 cd <my-project>
 ```
 
-## Adding Haskell libraries
+## Enable the flake
+
+There are two ways to use the flake:
+```bash
+nix flake init
+```
+(this would need to be done each time entering the `<my-project>` folder.
+
+Allow direnv (once):
+```bash
+direnv allow
+```
+
+### Adding Haskell libraries
 
 In order to add a Haskell library, add the name of the library:
 1. In `flake.nix` under the comment `# Other Haskell modules go here:` inside the variable `ghc`
 2. In the `build-depends` section of your `.cabal` file
 
-### Example
+#### Example
 In `flake.nix`:
 ```nix
       ghc = hPkgs.ghcWithPackages (ps:
@@ -87,12 +100,7 @@ After Cabal has been setup (`cabal init`) it is possible to use stack as well:
 stack init
 ```
 
-## Optional
-
-Allow direnv:
-```bash
-direnv allow
-```
+### Optional
 
 Download local hoogle index:
 ```bash
