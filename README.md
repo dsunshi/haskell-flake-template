@@ -38,7 +38,7 @@ cd <my-project>
 
 There are two ways to use the flake:
 ```bash
-nix flake init
+nix develop
 ```
 (this would need to be done each time entering the `<my-project>` folder.
 
