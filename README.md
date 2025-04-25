@@ -47,6 +47,29 @@ Allow direnv (once):
 direnv allow
 ```
 
+## Starting your own git repository
+
+Since `haskell-flake-template` is it's own `git` repository you may want to delete this information and restart your project as it's own `git` project. You can do this by:
+
+1. Remove all `haskell-flake-template` `git` data:
+```bash
+rm -rf .git/
+```
+
+2. Create a new `git` project:
+```bash
+git init
+```
+
+Setup Cabal:
+```bash
+cabal init
+```
+**or**
+```bash
+cabal init --non-interactive
+```
+
 ### Adding Haskell libraries
 
 In order to add a Haskell library, add the name of the library:
@@ -69,29 +92,6 @@ In `flake.nix`:
 In `<my-project>.cabal`:
 ```cabal
     build-depends:    base ^>=4.19.2.0, microlens
-```
-
-## Starting with your own git repository
-
-Since `haskell-flake-template` is it's own `git` repository you may want to delete this information and restart your project as it's own `git` project. You can do this by:
-
-1. Remove all `haskell-flake-template` `git` data:
-```bash
-rm -rf .git/
-```
-
-2. Create a new `git` project:
-```bash
-git init
-```
-
-Setup Cabal:
-```bash
-cabal init
-```
-**or**
-```bash
-cabal init --non-interactive
 ```
 ## Stack (optional)
 
