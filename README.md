@@ -93,6 +93,22 @@ In `<my-project>.cabal`:
 ```cabal
     build-depends:    base ^>=4.19.2.0, microlens
 ```
+
+## Vim/Nvim
+
+if you are facing code completion errors such as:
+```
+Failed to run ["cabal","v2-repl" ...
+```
+when using `vim/nvim` it may be necesarry to have a `hie.yaml` file. This flake includes
+a tool `gen-hie` which will echo the proper outputs to `stdout`. Therefore, if you would like to
+auto-generate `hie.yaml` it is as simple as:
+
+```bash
+gen-hie > hie.yaml
+```
+in the root directory of your project.
+
 ## Stack (optional)
 
 After Cabal has been setup (`cabal init`) it is possible to use stack as well:
