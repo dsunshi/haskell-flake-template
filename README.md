@@ -1,3 +1,5 @@
+[![Haskell Nix Flake](assets/Haskell_Nix.png)](https://github.com/dsunshi/haskell-flake-template)]
+
 # Haskell Flake Template
 
 # What's included?
