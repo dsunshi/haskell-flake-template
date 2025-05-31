@@ -1,5 +1,5 @@
-[![Haskell Nix Flake](assets/Haskell_Nix.png)](https://github.com/dsunshi/haskell-flake-template){ width="480" height="270" style="display: block; margin: 0 auto" }
- 
+{:.center}
+[![Haskell Nix Flake](assets/Haskell_Nix.png)](https://github.com/dsunshi/haskell-flake-template)
 
 # Haskell Flake Template
 
@@ -125,3 +125,7 @@ Download local hoogle index:
 ```bash
 hoogle generate --download
 ```
+
+.center {
+  text-align: center;
+}
