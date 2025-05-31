@@ -1,4 +1,5 @@
-[![Haskell Nix Flake](assets/Haskell_Nix.png)](https://github.com/dsunshi/haskell-flake-template)
+[![Haskell Nix Flake](assets/Haskell_Nix.png)](https://github.com/dsunshi/haskell-flake-template){ width="480" height="270" style="display: block; margin: 0 auto" }
+ 
 
 # Haskell Flake Template
 
