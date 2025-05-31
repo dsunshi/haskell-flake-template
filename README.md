@@ -1,5 +1,5 @@
 <p align="center">
-![Haskell Nix Flake](assets/Haskell_Nix.png)
+<img src="https://github.com/dsunshi/haskell-flake-template/blob/2a638a0ddd4bc605f0609531258af2207689bfda/assets/Haskell_Nix.png" width="480" height="270" /> 
 </p>
 
 # Haskell Flake Template

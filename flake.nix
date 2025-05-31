@@ -20,6 +20,7 @@
         # System level dependencies
         ghc # GHC compiler in the desired version (will be available on PATH)
         cabal-install # Cabal
+        python312Packages.grip # Amazing tool to live preview README changes
         stack-wrapped # See below for what this is
         haskellPackages.implicit-hie # Needed for nixvim LSP (auto generate LSP hie.yaml file from cabal)
         (haskell-language-server.override {
