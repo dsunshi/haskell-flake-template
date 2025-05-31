@@ -6,12 +6,19 @@
 
 # What's included?
 
-* ghc
-* cabal
-* stack
-* hie
+* [GHC](https://www.haskell.org/ghc/)
+* [Cabal](https://www.haskell.org/cabal/)
+* [Grip](https://github.com/joeyespo/grip)
+* [Stack](https://docs.haskellstack.org/en/stable/)
+  * `stack.yaml`
+  * `shell.nix`
+* [implicit-hie](https://github.com/Avi-D-coder/implicit-hie)
+* [haskell-language-server](https://github.com/haskell/haskell-language-server)
 * `.gitignore`
 * `.envrc`
+* `clean.sh`
+* [Nix flake](https://wiki.nixos.org/wiki/Flakes)
+  * `flake.nix`
 
 ## C-libraries (often required by Haskell applications):
 
@@ -20,12 +27,12 @@
 ## Optional features
 
 It should be easy to add the following by un-commenting code in `flake.nix`:
-* ormolu
-* hlint
-* hoogle
-* retrie
-* threadscope
-* markdown-unlint
+* [ormolu](https://github.com/tweag/ormolu)
+* [hlint](https://github.com/ndmitchell/hlint)
+* [hoogle](https://github.com/ndmitchell/hoogle?tab=readme-ov-file#command-line-version)
+* [retrie](https://github.com/facebookincubator/retrie)
+* [threadscope](https://github.com/haskell/ThreadScope)
+* [markdown-unlint](https://github.com/sol/markdown-unlit)
 
 # Getting Started
 
@@ -51,7 +58,7 @@ Allow direnv (once):
 direnv allow
 ```
 
-## Starting your own git repository
+## Starting your own project
 
 Since `haskell-flake-template` is it's own `git` repository you may want to delete this information and restart your project as it's own `git` project. You can do this by:
 
@@ -65,7 +72,13 @@ rm -rf .git/
 git init
 ```
 
-Setup Cabal:
+> [!TIP]
+> It is also possible to run the included `clean.sh` to revert the template into a fresh
+> state, ready to start a new project (the next steps).
+> [!CAUTION]
+> Once you create your project, this should **never** be used again.
+
+3. Setup Cabal:
 ```bash
 cabal init
 ```
@@ -76,9 +89,10 @@ cabal init --non-interactive
 
 ### Adding Haskell libraries
 
-In order to add a Haskell library, add the name of the library:
-1. In `flake.nix` under the comment `# Other Haskell modules go here:` inside the variable `ghc`
-2. In the `build-depends` section of your `.cabal` file
+> [!NOTE]
+> In order to add a Haskell library, add the name of the library:
+> 1. In `flake.nix` under the comment `# Other Haskell modules go here:` inside the variable `ghc`
+> 2. In the `build-depends` section of your `.cabal` file
 
 #### Example
 In `flake.nix`:
@@ -101,9 +115,9 @@ In `<my-project>.cabal`:
 ## Vim/Nvim
 
 if you are facing code completion errors such as:
-```
-Failed to run ["cabal","v2-repl" ...
-```
+> [!CAUTION]
+> `Failed to run ["cabal","v2-repl" ...`
+
 when using `vim/nvim` it may be necesarry to have a `hie.yaml` file. This flake includes
 a tool `gen-hie` which will echo the proper outputs to `stdout`. Therefore, if you would like to
 auto-generate `hie.yaml` it is as simple as:
@@ -113,12 +127,10 @@ gen-hie > hie.yaml
 ```
 in the root directory of your project.
 
-## Stack (optional)
+## Cabal hints
 
-After Cabal has been setup (`cabal init`) it is possible to use stack as well:
-```bash
-stack init
-```
+For the sake of cabal, and the haskell-lsp any new modules (haskell source files) need to be
+added to your `.cabal` file in the `other-modules:` section.
 
 ### Optional
 
