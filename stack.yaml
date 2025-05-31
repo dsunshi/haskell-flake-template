@@ -1,0 +1,23 @@
+system-ghc: true
+snapshot: ghc-9.8.4
+nix:
+  enable: true
+  # true by default. Tells Nix whether to run in a pure shell or not.
+  pure: true
+
+  # Empty by default. The list of packages you want to be
+  # available in the nix-shell at build time (with `stack
+  # build`) and run time (with `stack exec`).
+  packages: []
+
+  shell-file: shell.nix
+
+  # A list of strings, empty by default. Additional options that
+  # will be passed verbatim to the `nix-shell` command.
+  nix-shell-options: []
+
+  # A list of strings, empty by default, such as
+  # `[nixpkgs=/my/local/nixpkgs/clone]` that will be used to override
+  # NIX_PATH.
+  path: []
+  notify-if-nix-on-path: false
