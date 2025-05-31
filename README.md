@@ -1,7 +1,6 @@
 <p align="center">
-[![Haskell Nix Flake](assets/Haskell_Nix.png)](https://github.com/dsunshi/haskell-flake-template)
+![Haskell Nix Flake](assets/Haskell_Nix.png)
 </p>
-
 
 # Haskell Flake Template
 
