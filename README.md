@@ -75,6 +75,7 @@ git init
 > [!TIP]
 > It is also possible to run the included `clean.sh` to revert the template into a fresh
 > state, ready to start a new project (the next steps).
+
 > [!CAUTION]
 > Once you create your project, this should **never** be used again.
 
